@@ -13,11 +13,11 @@ import UIKit
     @IBOutlet weak var checkBox: UIButton!
     @IBOutlet weak var someTextLabel: UILabel!
     
-    var checkBoxTapped: ((Bool) -> ())?
+    var checkBoxTapped: Bool = false
     
     @IBAction func checkBoxTapped(_ sender: UIButton) {
         checkBox.isSelected = !checkBox.isSelected
-        checkBoxTapped?(checkBox.isSelected)
+        checkBoxTapped = checkBox.isSelected
     }
     
     var view: UIView!

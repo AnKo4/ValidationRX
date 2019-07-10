@@ -10,6 +10,7 @@
 		B38AF2621F98D44B7140562C /* Pods_ValidationRX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839C0D0BC7FB76E01F2C5B1B /* Pods_ValidationRX.framework */; };
 		C508D77D22D6035A007C3743 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C508D77A22D6035A007C3743 /* CheckBox.swift */; };
 		C508D77E22D6035A007C3743 /* CheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = C508D77C22D6035A007C3743 /* CheckBox.xib */; };
+		C594968522D615F400C3184F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C594968422D615F400C3184F /* ViewModel.swift */; };
 		C59C1ED922D5EBD900D2A989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C1ED822D5EBD900D2A989 /* AppDelegate.swift */; };
 		C59C1EDB22D5EBD900D2A989 /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C1EDA22D5EBD900D2A989 /* ValidationViewController.swift */; };
 		C59C1EDE22D5EBD900D2A989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59C1EDC22D5EBD900D2A989 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		8539534E6B37AC81B888FEF8 /* Pods-ValidationRX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValidationRX.release.xcconfig"; path = "Target Support Files/Pods-ValidationRX/Pods-ValidationRX.release.xcconfig"; sourceTree = "<group>"; };
 		C508D77A22D6035A007C3743 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		C508D77C22D6035A007C3743 /* CheckBox.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckBox.xib; sourceTree = "<group>"; };
+		C594968422D615F400C3184F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		C59C1ED522D5EBD900D2A989 /* ValidationRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValidationRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59C1ED822D5EBD900D2A989 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59C1EDA22D5EBD900D2A989 /* ValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		C508D77622D5FB48007C3743 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C594968422D615F400C3184F /* ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -83,20 +86,6 @@
 				C59C1EE122D5EBDB00D2A989 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		C508D77922D6035A007C3743 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		C508D77B22D6035A007C3743 /* XIB */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = XIB;
 			sourceTree = "<group>";
 		};
 		C508D77F22D6037A007C3743 /* Checkbox */ = {
@@ -130,8 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				C508D77F22D6037A007C3743 /* Checkbox */,
-				C508D77922D6035A007C3743 /* Views */,
-				C508D77B22D6035A007C3743 /* XIB */,
 				C508D77822D602F2007C3743 /* Storyboards */,
 				C508D77722D5FB5A007C3743 /* ViewController */,
 				C508D77622D5FB48007C3743 /* ViewModel */,
@@ -250,6 +237,7 @@
 			files = (
 				C59C1EDB22D5EBD900D2A989 /* ValidationViewController.swift in Sources */,
 				C59C1ED922D5EBD900D2A989 /* AppDelegate.swift in Sources */,
+				C594968522D615F400C3184F /* ViewModel.swift in Sources */,
 				C508D77D22D6035A007C3743 /* CheckBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
