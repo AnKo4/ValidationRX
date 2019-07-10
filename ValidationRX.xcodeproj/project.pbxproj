@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B38AF2621F98D44B7140562C /* Pods_ValidationRX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839C0D0BC7FB76E01F2C5B1B /* Pods_ValidationRX.framework */; };
+		C508D77D22D6035A007C3743 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C508D77A22D6035A007C3743 /* CheckBox.swift */; };
+		C508D77E22D6035A007C3743 /* CheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = C508D77C22D6035A007C3743 /* CheckBox.xib */; };
 		C59C1ED922D5EBD900D2A989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C1ED822D5EBD900D2A989 /* AppDelegate.swift */; };
-		C59C1EDB22D5EBD900D2A989 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C1EDA22D5EBD900D2A989 /* ViewController.swift */; };
+		C59C1EDB22D5EBD900D2A989 /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C1EDA22D5EBD900D2A989 /* ValidationViewController.swift */; };
 		C59C1EDE22D5EBD900D2A989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59C1EDC22D5EBD900D2A989 /* Main.storyboard */; };
 		C59C1EE022D5EBDB00D2A989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59C1EDF22D5EBDB00D2A989 /* Assets.xcassets */; };
 		C59C1EE322D5EBDB00D2A989 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59C1EE122D5EBDB00D2A989 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C02C9FB687D937350BF106C /* Pods-ValidationRX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValidationRX.debug.xcconfig"; path = "Target Support Files/Pods-ValidationRX/Pods-ValidationRX.debug.xcconfig"; sourceTree = "<group>"; };
+		839C0D0BC7FB76E01F2C5B1B /* Pods_ValidationRX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValidationRX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8539534E6B37AC81B888FEF8 /* Pods-ValidationRX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValidationRX.release.xcconfig"; path = "Target Support Files/Pods-ValidationRX/Pods-ValidationRX.release.xcconfig"; sourceTree = "<group>"; };
+		C508D77A22D6035A007C3743 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		C508D77C22D6035A007C3743 /* CheckBox.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckBox.xib; sourceTree = "<group>"; };
 		C59C1ED522D5EBD900D2A989 /* ValidationRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValidationRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59C1ED822D5EBD900D2A989 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C59C1EDA22D5EBD900D2A989 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C59C1EDA22D5EBD900D2A989 /* ValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewController.swift; sourceTree = "<group>"; };
 		C59C1EDD22D5EBD900D2A989 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C59C1EDF22D5EBDB00D2A989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C59C1EE222D5EBDB00D2A989 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -29,17 +37,84 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38AF2621F98D44B7140562C /* Pods_ValidationRX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51307018C675BA38A0E6D2BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C02C9FB687D937350BF106C /* Pods-ValidationRX.debug.xcconfig */,
+				8539534E6B37AC81B888FEF8 /* Pods-ValidationRX.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C19B33B43790C4F72ACE4138 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				839C0D0BC7FB76E01F2C5B1B /* Pods_ValidationRX.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C508D77622D5FB48007C3743 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C508D77722D5FB5A007C3743 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C59C1EDA22D5EBD900D2A989 /* ValidationViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C508D77822D602F2007C3743 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C59C1EDC22D5EBD900D2A989 /* Main.storyboard */,
+				C59C1EE122D5EBDB00D2A989 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C508D77922D6035A007C3743 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C508D77B22D6035A007C3743 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		C508D77F22D6037A007C3743 /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				C508D77A22D6035A007C3743 /* CheckBox.swift */,
+				C508D77C22D6035A007C3743 /* CheckBox.xib */,
+			);
+			path = Checkbox;
+			sourceTree = "<group>";
+		};
 		C59C1ECC22D5EBD900D2A989 = {
 			isa = PBXGroup;
 			children = (
 				C59C1ED722D5EBD900D2A989 /* ValidationRX */,
 				C59C1ED622D5EBD900D2A989 /* Products */,
+				51307018C675BA38A0E6D2BC /* Pods */,
+				C19B33B43790C4F72ACE4138 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,11 +129,14 @@
 		C59C1ED722D5EBD900D2A989 /* ValidationRX */ = {
 			isa = PBXGroup;
 			children = (
+				C508D77F22D6037A007C3743 /* Checkbox */,
+				C508D77922D6035A007C3743 /* Views */,
+				C508D77B22D6035A007C3743 /* XIB */,
+				C508D77822D602F2007C3743 /* Storyboards */,
+				C508D77722D5FB5A007C3743 /* ViewController */,
+				C508D77622D5FB48007C3743 /* ViewModel */,
 				C59C1ED822D5EBD900D2A989 /* AppDelegate.swift */,
-				C59C1EDA22D5EBD900D2A989 /* ViewController.swift */,
-				C59C1EDC22D5EBD900D2A989 /* Main.storyboard */,
 				C59C1EDF22D5EBDB00D2A989 /* Assets.xcassets */,
-				C59C1EE122D5EBDB00D2A989 /* LaunchScreen.storyboard */,
 				C59C1EE422D5EBDB00D2A989 /* Info.plist */,
 			);
 			path = ValidationRX;
@@ -71,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C59C1EE722D5EBDB00D2A989 /* Build configuration list for PBXNativeTarget "ValidationRX" */;
 			buildPhases = (
+				81643E730D4D8B39C552FB4F /* [CP] Check Pods Manifest.lock */,
 				C59C1ED122D5EBD900D2A989 /* Sources */,
 				C59C1ED222D5EBD900D2A989 /* Frameworks */,
 				C59C1ED322D5EBD900D2A989 /* Resources */,
+				54102B109CEDF0510CFE96B5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C508D77E22D6035A007C3743 /* CheckBox.xib in Resources */,
 				C59C1EE322D5EBDB00D2A989 /* LaunchScreen.storyboard in Resources */,
 				C59C1EE022D5EBDB00D2A989 /* Assets.xcassets in Resources */,
 				C59C1EDE22D5EBD900D2A989 /* Main.storyboard in Resources */,
@@ -130,13 +211,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		54102B109CEDF0510CFE96B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ValidationRX/Pods-ValidationRX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81643E730D4D8B39C552FB4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ValidationRX-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C59C1ED122D5EBD900D2A989 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C59C1EDB22D5EBD900D2A989 /* ViewController.swift in Sources */,
+				C59C1EDB22D5EBD900D2A989 /* ValidationViewController.swift in Sources */,
 				C59C1ED922D5EBD900D2A989 /* AppDelegate.swift in Sources */,
+				C508D77D22D6035A007C3743 /* CheckBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +392,7 @@
 		};
 		C59C1EE822D5EBDB00D2A989 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C02C9FB687D937350BF106C /* Pods-ValidationRX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +410,7 @@
 		};
 		C59C1EE922D5EBDB00D2A989 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8539534E6B37AC81B888FEF8 /* Pods-ValidationRX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
