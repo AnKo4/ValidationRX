@@ -24,12 +24,12 @@ class ValidationViewController: UIViewController {
 
     
     var viewModel = ViewModel()
-
+ 
+    let disposeBag = DisposeBag()
     
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-        self.view.backgroundColor = .lightGray
-        print("tapped")
+        self.view.backgroundColor = .green
     }
     
     
@@ -39,47 +39,29 @@ class ValidationViewController: UIViewController {
         setupUI()
         
     }
+ 
     
-    let disposeBag = DisposeBag()
-
     func setupUI() {
         
         continueButton.isEnabled = false
         continueButton.backgroundColor = UIColor.lightGray
- 
-        /*
-        let name = nameTextField.rx.text.orEmpty.asObservable()
-        let surname = surnameTextField.rx.text.orEmpty.asObservable()
-        let phoneNumber = phoneNumberTextField.rx.text.orEmpty.asObservable()
- */
- 
+
         nameTextField.rx.text.orEmpty.bind(to: viewModel.name).disposed(by: disposeBag)
         surnameTextField.rx.text.orEmpty.bind(to: viewModel.surname).disposed(by: disposeBag)
         phoneNumberTextField.rx.text.orEmpty.bind(to: viewModel.phoneNumber).disposed(by: disposeBag)
         
-   /*
-        nameTextField.rx.text.orEmpty.asObservable().bind {
-            self.viewModel.validateTextFields()
-        }
- */
- //       let checked = checkBox.rx.checkBoxTapped.asObservable
+        checkBox.checkBoxChecked.asObservable().bind(to: viewModel.checked).disposed(by: disposeBag)
         
-        
-        viewModel.validateTextFields(/*name: <#Observable<String>#>, surname: <#Observable<String>#>, phoneNumber: <#Observable<String>#>*/)
+        viewModel.validateTextFields()
             .bind(to: continueButton.rx.isEnabled)
             .disposed(by: disposeBag)
         
-        viewModel.validateTextFields().asObservable().map { $0 ? UIColor.cyan : UIColor.lightGray }.bind(to: continueButton.rx.backgroundColor).disposed(by: disposeBag)
-//            .bind(to: continueButton.rx.isEnabled)
-//            .disposed(by: disposeBag)
-
+        viewModel.validateTextFields()
+            .asObservable()
+            .map { $0 ? UIColor.blue : UIColor.lightGray }
+            .bind(to: continueButton.rx.backgroundColor)
+            .disposed(by: disposeBag)
         
- 
-        
-        
-  
-        
-
     }
 }
 

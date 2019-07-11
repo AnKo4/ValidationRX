@@ -7,22 +7,25 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 @IBDesignable class CheckBox: UIView {
 
     @IBOutlet weak var checkBox: UIButton!
     @IBOutlet weak var someTextLabel: UILabel!
     
-    var checkBoxTapped: Bool = false
+    var view: UIView!
+    
+    var checkBoxChecked = BehaviorRelay<Bool>(value: false)
     
     @IBAction func checkBoxTapped(_ sender: UIButton) {
         checkBox.isSelected = !checkBox.isSelected
-        checkBoxTapped = checkBox.isSelected
+        checkBoxChecked.accept(checkBox.isSelected)
     }
     
-    var view: UIView!
-
     
+
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -49,6 +52,7 @@ import UIKit
     }
     
     func setupView() {
+        
         view = loadFromNib()
         view.frame = bounds
         view.layer.cornerRadius = 5
@@ -58,8 +62,9 @@ import UIKit
         checkBox.setImage(UIImage(named: "checkbox_unchecked"), for: .normal)
         checkBox.setImage(UIImage(named: "checkbox_checked"), for: .selected)
         checkBox.isSelected = false
-        
+
         someTextLabel.text = "Я согласен с условиями лицензионного соглашения"
+    
     }
     
 }
