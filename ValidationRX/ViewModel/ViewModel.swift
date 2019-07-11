@@ -8,14 +8,19 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 struct ViewModel {
-    func validateTextFields(name: Observable<String>, surname: Observable<String>, phoneNumber: Observable<String>) -> Observable<Bool> {
-        let validation = Observable.combineLatest(name, surname, phoneNumber)   {
-            (name, surname, phoneNumber) in
-            return name.count > 0 && surname.count > 0 && phoneNumber.count > 0
+    
+    var name = BehaviorRelay<String>(value: "")
+    var surname = BehaviorRelay<String>(value: "")
+    var phoneNumber = BehaviorRelay<String>(value: "")
+    
+    func validateTextFields(/*name: Observable<String>, surname: Observable<String>, phoneNumber: Observable<String>*/) -> Observable<Bool> {
+        print("func!")
+        let validation = Observable.combineLatest(self.name.asObservable(), self.surname.asObservable(), self.phoneNumber.asObservable())   { (n,s,p) in
+          return n.count > 0 && s.count > 0 && p.count > 0
         }
-        print(validation)
         return validation
     }
 }

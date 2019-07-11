@@ -39,22 +39,47 @@ class ValidationViewController: UIViewController {
         setupUI()
         
     }
+    
+    let disposeBag = DisposeBag()
 
     func setupUI() {
         
-        let disposeBag = DisposeBag()
-        
         continueButton.isEnabled = false
         continueButton.backgroundColor = UIColor.lightGray
-        
+ 
+        /*
         let name = nameTextField.rx.text.orEmpty.asObservable()
         let surname = surnameTextField.rx.text.orEmpty.asObservable()
         let phoneNumber = phoneNumberTextField.rx.text.orEmpty.asObservable()
+ */
+ 
+        nameTextField.rx.text.orEmpty.bind(to: viewModel.name).disposed(by: disposeBag)
+        surnameTextField.rx.text.orEmpty.bind(to: viewModel.surname).disposed(by: disposeBag)
+        phoneNumberTextField.rx.text.orEmpty.bind(to: viewModel.phoneNumber).disposed(by: disposeBag)
+        
+   /*
+        nameTextField.rx.text.orEmpty.asObservable().bind {
+            self.viewModel.validateTextFields()
+        }
+ */
  //       let checked = checkBox.rx.checkBoxTapped.asObservable
         
-        viewModel.validateTextFields(name: name, surname: surname, phoneNumber: phoneNumber)
+        
+        viewModel.validateTextFields(/*name: <#Observable<String>#>, surname: <#Observable<String>#>, phoneNumber: <#Observable<String>#>*/)
             .bind(to: continueButton.rx.isEnabled)
             .disposed(by: disposeBag)
+        
+        viewModel.validateTextFields().asObservable().map { $0 ? UIColor.cyan : UIColor.lightGray }.bind(to: continueButton.rx.backgroundColor).disposed(by: disposeBag)
+//            .bind(to: continueButton.rx.isEnabled)
+//            .disposed(by: disposeBag)
+
+        
+ 
+        
+        
+  
+        
+
     }
 }
 
