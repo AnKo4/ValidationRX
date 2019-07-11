@@ -11,29 +11,22 @@ import RxSwift
 import RxCocoa
 
 @IBDesignable class CheckBox: UIView {
+    
+    // MARK: - IBOutlets
 
     @IBOutlet weak var checkBox: UIButton!
     @IBOutlet weak var someTextLabel: UILabel!
     
-    var view: UIView!
+    // MARK: - Public properties
     
     var checkBoxChecked = BehaviorRelay<Bool>(value: false)
     
-    @IBAction func checkBoxTapped(_ sender: UIButton) {
-        checkBox.isSelected = !checkBox.isSelected
-        checkBoxChecked.accept(checkBox.isSelected)
-    }
+    // MARK: - Private properties
     
+    var view: UIView!
+ 
+    // MARK: - Lifecycle
     
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -44,15 +37,16 @@ import RxCocoa
         setupView()
     }
     
-    func loadFromNib() -> UIView {
+    // MARK: - Private methods
+    
+    private func loadFromNib() -> UIView {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "CheckBox", bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
         return view
     }
     
-    func setupView() {
-        
+    private func setupView() {
         view = loadFromNib()
         view.frame = bounds
         view.layer.cornerRadius = 5
@@ -64,7 +58,13 @@ import RxCocoa
         checkBox.isSelected = false
 
         someTextLabel.text = "Я согласен с условиями лицензионного соглашения"
+    }
     
+    // MARK: - IBActions
+    
+    @IBAction func checkBoxTapped(_ sender: UIButton) {
+        checkBox.isSelected = !checkBox.isSelected
+        checkBoxChecked.accept(checkBox.isSelected)
     }
     
 }

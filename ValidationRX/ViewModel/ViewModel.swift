@@ -12,10 +12,14 @@ import RxCocoa
 
 struct ViewModel {
     
+    // MARK: - Public properties
+    
     var name = BehaviorRelay<String>(value: "")
     var surname = BehaviorRelay<String>(value: "")
     var phoneNumber = BehaviorRelay<String>(value: "")
     var checked = BehaviorRelay<Bool>(value: false)
+    
+    // MARK: - Public methods
     
     func validateTextFields() -> Observable<Bool> {
         let validation = Observable.combineLatest(self.name.asObservable(), self.surname.asObservable(), self.phoneNumber.asObservable(), self.checked.asObservable()) { (n,s,p,c) in

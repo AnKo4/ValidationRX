@@ -12,6 +12,8 @@ import RxCocoa
 
 class ValidationViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var patronymicTextField: UITextField!
@@ -21,28 +23,21 @@ class ValidationViewController: UIViewController {
     @IBOutlet weak var checkBox: CheckBox!
     @IBOutlet weak var continueButton: UIButton!
     
-
+    // MARK: - Private properties
     
-    var viewModel = ViewModel()
- 
-    let disposeBag = DisposeBag()
+    private var viewModel = ViewModel()
+    private let disposeBag = DisposeBag()
     
-    
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        self.view.backgroundColor = .green
-    }
-    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
-        
     }
  
+    // MARK: - Private methods
     
-    func setupUI() {
-        
+    private func setupUI() {
         continueButton.isEnabled = false
         continueButton.backgroundColor = UIColor.lightGray
 
@@ -61,7 +56,13 @@ class ValidationViewController: UIViewController {
             .map { $0 ? UIColor.blue : UIColor.lightGray }
             .bind(to: continueButton.rx.backgroundColor)
             .disposed(by: disposeBag)
-        
     }
+    
+    // MARK: - IBActions
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        self.view.backgroundColor = .green
+    }
+    
 }
 
