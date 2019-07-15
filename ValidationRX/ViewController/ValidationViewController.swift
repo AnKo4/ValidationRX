@@ -43,7 +43,9 @@ class ValidationViewController: UIViewController {
 
         nameTextField.rx.text.orEmpty.bind(to: viewModel.name).disposed(by: disposeBag)
         surnameTextField.rx.text.orEmpty.bind(to: viewModel.surname).disposed(by: disposeBag)
+        patronymicTextField.rx.text.orEmpty.bind(to: viewModel.patronymic).disposed(by: disposeBag)
         phoneNumberTextField.rx.text.orEmpty.bind(to: viewModel.phoneNumber).disposed(by: disposeBag)
+        eMailTextField.rx.text.orEmpty.bind(to: viewModel.email).disposed(by: disposeBag)
         
         checkBox.checkBoxChecked.asObservable().bind(to: viewModel.checked).disposed(by: disposeBag)
         
