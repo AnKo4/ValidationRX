@@ -19,11 +19,17 @@ struct ViewModel {
     var phoneNumber = BehaviorRelay<String>(value: "")
     var checked = BehaviorRelay<Bool>(value: false)
     
+    let validator = Validator()
+    
     // MARK: - Public methods
     
     func validateTextFields() -> Observable<Bool> {
-        let validation = Observable.combineLatest(self.name.asObservable(), self.surname.asObservable(), self.phoneNumber.asObservable(), self.checked.asObservable()) { (n,s,p,c) in
-            return n.count > 0 && s.count > 0 && p.count > 0 && c
+        let validation = Observable.combineLatest(self.name.asObservable(), self.surname.asObservable(), self.phoneNumber.asObservable(), self.checked.asObservable()) { (name,surname,phoneNumber,checked) in
+ /*           return  self.validator.isValid(textToValidate: name, validationPattern: .name) &&
+                    self.validator.isValid(textToValidate: surname, validationPattern: .name) &&
+                    self.validator.isValid(textToValidate: phoneNumber, validationPattern: .phoneNumber) &&
+                    checked   */
+            return name.isValid(validationPattern: .name) && surname.isValid(validationPattern: .name) && phoneNumber.isValid(validationPattern: .phoneNumber) && checked
         }
         return validation
     }

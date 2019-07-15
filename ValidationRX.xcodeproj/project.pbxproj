@@ -10,6 +10,9 @@
 		B38AF2621F98D44B7140562C /* Pods_ValidationRX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839C0D0BC7FB76E01F2C5B1B /* Pods_ValidationRX.framework */; };
 		C508D77D22D6035A007C3743 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C508D77A22D6035A007C3743 /* CheckBox.swift */; };
 		C508D77E22D6035A007C3743 /* CheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = C508D77C22D6035A007C3743 /* CheckBox.xib */; };
+		C50F363022DC9429008ED55E /* RegExps.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50F362F22DC9429008ED55E /* RegExps.swift */; };
+		C50F363322DC9C78008ED55E /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50F363222DC9C78008ED55E /* Validator.swift */; };
+		C50F363622DCA27C008ED55E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50F363522DCA27C008ED55E /* Extensions.swift */; };
 		C594968522D615F400C3184F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C594968422D615F400C3184F /* ViewModel.swift */; };
 		C59C1ED922D5EBD900D2A989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C1ED822D5EBD900D2A989 /* AppDelegate.swift */; };
 		C59C1EDB22D5EBD900D2A989 /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C1EDA22D5EBD900D2A989 /* ValidationViewController.swift */; };
@@ -24,6 +27,9 @@
 		8539534E6B37AC81B888FEF8 /* Pods-ValidationRX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValidationRX.release.xcconfig"; path = "Target Support Files/Pods-ValidationRX/Pods-ValidationRX.release.xcconfig"; sourceTree = "<group>"; };
 		C508D77A22D6035A007C3743 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		C508D77C22D6035A007C3743 /* CheckBox.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckBox.xib; sourceTree = "<group>"; };
+		C50F362F22DC9429008ED55E /* RegExps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegExps.swift; sourceTree = "<group>"; };
+		C50F363222DC9C78008ED55E /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		C50F363522DCA27C008ED55E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C594968422D615F400C3184F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		C59C1ED522D5EBD900D2A989 /* ValidationRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValidationRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59C1ED822D5EBD900D2A989 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +103,30 @@
 			path = Checkbox;
 			sourceTree = "<group>";
 		};
+		C50F362E22DC9400008ED55E /* RegExps */ = {
+			isa = PBXGroup;
+			children = (
+				C50F362F22DC9429008ED55E /* RegExps.swift */,
+			);
+			path = RegExps;
+			sourceTree = "<group>";
+		};
+		C50F363122DC9C64008ED55E /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				C50F363222DC9C78008ED55E /* Validator.swift */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
+		C50F363422DCA260008ED55E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C50F363522DCA27C008ED55E /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C59C1ECC22D5EBD900D2A989 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +148,9 @@
 		C59C1ED722D5EBD900D2A989 /* ValidationRX */ = {
 			isa = PBXGroup;
 			children = (
+				C50F363422DCA260008ED55E /* Extensions */,
+				C50F363122DC9C64008ED55E /* Validator */,
+				C50F362E22DC9400008ED55E /* RegExps */,
 				C508D77F22D6037A007C3743 /* Checkbox */,
 				C508D77822D602F2007C3743 /* Storyboards */,
 				C508D77722D5FB5A007C3743 /* ViewController */,
@@ -238,7 +271,10 @@
 				C59C1EDB22D5EBD900D2A989 /* ValidationViewController.swift in Sources */,
 				C59C1ED922D5EBD900D2A989 /* AppDelegate.swift in Sources */,
 				C594968522D615F400C3184F /* ViewModel.swift in Sources */,
+				C50F363022DC9429008ED55E /* RegExps.swift in Sources */,
+				C50F363322DC9C78008ED55E /* Validator.swift in Sources */,
 				C508D77D22D6035A007C3743 /* CheckBox.swift in Sources */,
+				C50F363622DCA27C008ED55E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
